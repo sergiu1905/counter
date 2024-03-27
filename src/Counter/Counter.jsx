@@ -4,16 +4,16 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   const handleClickCount = () => {
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
   };
   const handleMultiplyCount = () => {
-    setCount(count * 10);
+    setCount((prevCount) => prevCount * 10);
   };
   const handleDivideCount = () => {
-    setCount(count / 10);
+    setCount((prevCount) => prevCount / 10);
   };
   const handleMultiplyByItself = () => {
-    setCount(count * count);
+    setCount((prevCount) => prevCount * prevCount);
   };
   return (
     <div className="task1">
